@@ -1,0 +1,6 @@
+en:
+  errors:
+    user:
+      presence:
+        email: 'Please make sure, Email must be present.'
+        password: 'Please make sure, Password must be present.'
