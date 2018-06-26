@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :get_user, only: [:account_confirmation]
+
   def sign_up
     unless params[:user][:email].present? && params[:user][:password].present?
       return render json: { errors: [I18n.t('errors.user.presence')] }
@@ -14,10 +16,15 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def account_confirmation
+
   end
 
 private
   def user_params
     params.require(:user).permit(:email, :password)
+  end
+
+  def get_user
+    @user = User.find(params[:id])
   end
 end

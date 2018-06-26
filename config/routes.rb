@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         collection do
           post 'sign_up', to: 'users#sign_up'
         end
+        put '/:id/confirmation', to: 'users#account_confirmation'
       end
     end
   end
