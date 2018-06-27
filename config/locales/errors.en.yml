@@ -4,6 +4,10 @@ en:
       presence: 'Please make sure, `Email` and  `Password` must be present.'
       presence_otp: 'Please make sure, OTP must be present.'
       wrong_otp: 'You entered wrong OTP.'
+      email:
+        not_found: 'Email not found.'
+      password:
+        invalid: 'Your Password is invalid.'
   sucess:
     user:
       reset_otp: 'OTP is sent, please check the Email.'

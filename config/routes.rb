@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:show] do
         collection do
           post 'sign_up', to: 'users#sign_up'
+          post 'sign_in', to: 'users#log_in'
         end
         post '/confirmation', to: 'users#account_confirmation'
         post '/reset_otp', to: 'users#reset_verification_code'
